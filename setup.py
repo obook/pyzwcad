@@ -5,15 +5,19 @@ try:
 except ImportError:
     from distutils.core import setup
 
+productName = "pyzwcad"
+cadName = "ZwCAD"
 
 setup(
-    name="pyautocad",
-    packages=["pyautocad", "pyautocad.contrib"],
+    name=productName,
+#    packages=["pyautocad", "pyautocad.contrib"],
+    packages=[productName, productName + ".contrib"],
     version="0.2.0",
-    description="AutoCAD Automation for Python",
-    author="Roman Haritonov",
-    author_email="reclosedev@gmail.com",
-    url="https://github.com/reclosedev/pyautocad",
+#    description="AutoCAD Automation for Python",
+    description=cadName + " Automation for Python",
+    author="ytianxia6",
+    author_email="ytianxia6@gmail.com",
+    url="https://github.com/ytianxia6/pyzwcad",
     install_requires=[
         'comtypes>=1.1.1',
     ],

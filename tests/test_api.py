@@ -49,8 +49,9 @@ class ApiTestCase(unittest.TestCase):
         self.assertEqual(lines[0].EndPoint, p2)
         self.assertEqual(lines[1].StartPoint, p2)
         self.assertEqual(lines[1].EndPoint, p3)
-        with self.assertRaises(COMError):
-            model.AddLine(aDouble(0, 0), APoint(0, 0, 0))
+        # 在中望CAD中，该调用可以正常返回
+        # with self.assertRaises(COMError):
+        #     model.AddLine(aDouble(0, 0), APoint(0, 0, 0))
 
     def test_text(self):
         model = self.acad.model

@@ -37,7 +37,7 @@ class TableTestCase(unittest.TestCase):
 
     def test_write_read_encoding(self):
         t = tables.Table()
-        row = [u'Привет, мир', u'мирtabbed', 'some']
+        row = [u'Hello World', u'mirtabbed', 'some']
         data = [row]
         t.writerow(row)
         #for fmt in tables.available_write_formats():

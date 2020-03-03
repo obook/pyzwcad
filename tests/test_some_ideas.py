@@ -17,7 +17,7 @@ class MyTestCase(unittest.TestCase):
     def test_sort_by_correct(self):
         correct = ['TP', 'VRU', 'SHR', 'SHO', 'LAMP']
         new_seq = ['SHR', 'VRU', 'LAMP', 'SHO', 'STANOK']
-        print sort_by_correct_order(new_seq, correct)
+        print(sort_by_correct_order(new_seq, correct))
 
     def test_tablib(self):
         d = tablib.Dataset([1,2,3], [4,5,6])
