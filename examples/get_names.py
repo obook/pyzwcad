@@ -3,7 +3,8 @@
 import codecs
 import sys
 
-from pyautocad import Autocad, APoint, utils
+from pyautocad import Autocad, APoint
+from pyautocad import utils
 
 
 def iter_drawings_names(acad, doc):

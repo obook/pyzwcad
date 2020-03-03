@@ -4,7 +4,7 @@ import os, sys
 sys.path.insert(0, os.path.abspath('..'))
 import unittest
 
-from pyautocad.contrib import tables
+from pyzwcad.contrib import tables
 import tablib
 
 

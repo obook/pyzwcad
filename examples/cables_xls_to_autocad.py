@@ -4,11 +4,9 @@
 import sys
 from collections import defaultdict
 
-import xlrd
-
 from pyautocad import Autocad, ACAD, APoint
 from pyautocad.utils import timing
-from pyautocad.contrib.tables import Table
+from pyautocad.contrib import Table
 
 
 HEADER_TEXT_HEIGHT = 3.5

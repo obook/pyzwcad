@@ -5,7 +5,7 @@ import os, sys
 sys.path.insert(0, os.path.abspath('..'))
 import unittest
 
-from pyautocad.types import APoint, distance
+from pyzwcad import APoint, distance
 
 
 class PointTestCase(unittest.TestCase):

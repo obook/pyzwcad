@@ -5,7 +5,6 @@ import os, sys
 sys.path.insert(0, os.path.abspath('..'))
 import unittest
 
-from pyautocad import Autocad
 import tablib
 
 

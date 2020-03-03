@@ -6,7 +6,7 @@ sys.path.insert(0, os.path.abspath('..'))
 import unittest
 import mock
 
-from pyautocad.cache import Cached
+from pyzwcad.cache import Cached
 
 
 class C(object):

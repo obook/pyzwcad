@@ -5,23 +5,21 @@ try:
 except ImportError:
     from distutils.core import setup
 
-productName = "pyzwcad"
-cadName = "ZwCAD"
 
 setup(
-    name=productName,
+    name="pyzwcad",
 #    packages=["pyautocad", "pyautocad.contrib"],
-    packages=[productName, productName + ".contrib"],
-    version="0.2.0",
+    packages=["pyzwcad", "pyzwcad.contrib"],
+    version="0.3.0",
 #    description="AutoCAD Automation for Python",
-    description=cadName + " Automation for Python",
+    description="ZwCAD Automation for Python",
     author="ytianxia6",
     author_email="ytianxia6@gmail.com",
     url="https://github.com/ytianxia6/pyzwcad",
     install_requires=[
         'comtypes>=1.1.1',
     ],
-    keywords=["autocad", "automation", "activex", "comtypes"],
+    keywords=["zwcad", "automation", "activex", "comtypes"],
     license="BSD License",
     include_package_data=True,
     classifiers=[
@@ -30,12 +28,14 @@ setup(
         "Development Status :: 4 - Beta",
         "Intended Audience :: Developers",
         "Intended Audience :: System Administrators",
-        "Programming Language :: Python :: 2",
+#        "Programming Language :: Python :: 2",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 2.7",
+#        "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3.3",
         "Programming Language :: Python :: 3.4",
         "Programming Language :: Python :: 3.5",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: Implementation :: CPython",
         "Operating System :: Microsoft :: Windows",
         "Topic :: Software Development :: Libraries :: Python Modules",

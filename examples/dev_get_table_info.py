@@ -3,7 +3,8 @@
 #date: 13.02.12
 import pprint
 
-from pyautocad import Autocad, utils
+from pyautocad import Autocad
+from pyautocad import utils
 
 
 def print_table_info(table, print_rows=0):

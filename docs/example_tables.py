@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from pyautocad import Autocad, APoint
-from pyautocad.contrib.tables import Table
+from pyautocad.contrib import Table
 
 acad = Autocad()
 p1 = APoint(0, 0)

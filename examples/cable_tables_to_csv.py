@@ -2,8 +2,9 @@
 #-*- coding: utf-8 -*-
 import optparse
 
-from pyautocad import Autocad, utils
-from pyautocad.contrib.tables import Table, available_write_formats
+from pyautocad import Autocad
+from pyautocad import utils
+from pyautocad.contrib import Table, available_write_formats
 
 
 def iter_cable_tables(acad, block):

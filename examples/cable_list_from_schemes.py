@@ -9,7 +9,7 @@ import logging
 
 from pyautocad import Autocad
 from pyautocad.utils import unformat_mtext, timing
-from pyautocad.contrib.tables import Table, available_write_formats
+from pyautocad.contrib import Table, available_write_formats
 
 
 logging.basicConfig(level=logging.INFO, format='%(message)s')

@@ -5,7 +5,7 @@ import os, sys
 sys.path.insert(0, os.path.abspath('..'))
 import unittest
 
-from pyautocad.utils import unformat_mtext, mtext_to_string, string_to_mtext
+from pyzwcad.utils import unformat_mtext, mtext_to_string, string_to_mtext
 
 class UtilsTestCase(unittest.TestCase):
     def test_unformat(self):

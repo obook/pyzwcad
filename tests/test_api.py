@@ -4,11 +4,10 @@
 from __future__ import print_function
 import os, sys
 sys.path.insert(0, os.path.abspath('..'))
-from _ctypes import COMError
 import unittest
 
-from pyautocad import Autocad, aDouble, APoint, ACAD
-from pyautocad.compat import unicode
+from pyzwcad import ZwCAD, APoint, ZCAD
+from pyzwcad.compat import unicode
 
 
 NPASS = 3000
@@ -16,7 +15,7 @@ NPASS = 3000
 
 class ApiTestCase(unittest.TestCase):
     def setUp(self):
-        self.acad = Autocad(True)
+        self.acad = ZwCAD(True)
         self.doc = self.acad.app.Documents.Add()
         print('Current', self.doc.Name)
 
@@ -108,7 +107,7 @@ class ApiTestCase(unittest.TestCase):
         self.assertEqual(text.TextString, 'test 3')
 
     def test_some_constants_available(self):
-        self.assertTrue(ACAD.acAlignmentRight)
+        self.assertTrue(ZCAD.zcAlignmentRight)
 
 
 if __name__ == '__main__':

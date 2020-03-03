@@ -7,7 +7,6 @@ from collections import namedtuple, defaultdict
 from pyautocad import Autocad
 from pyautocad import utils
 
-
 LampEntry = namedtuple('LampEntry', 'number, mark, numxpower')
 
 # \A1;2ARCTIC SMC/SAN 254 \S2х54/2,5;\P300 лк

@@ -1,7 +1,10 @@
-pyautoacad - AutoCAD Automation for Python
+pyzwcad - ZwCAD Automation for Python
 ------------------------------------------
 
-This library aimed to simplify writing ActiveX_ Automation_ scripts for AutoCAD_ with Python
+This library aimed to simplify writing ActiveX_ Automation_ scripts for ZwCAD_ with Python
+
+This library is forked from the pyautocad_ library, everywhere you can call `ACAD` and `ZCAD`, you can use ZwCad type and also use AutoCad type.
+
 
 Requires:
 ----------
@@ -26,10 +29,10 @@ Simple usage example:
 
 .. code-block:: python
 
-    from pyautocad import Autocad, APoint
+    from pyzwcad import ZwCAD, APoint
 
 
-    acad = Autocad()
+    acad = ZwCAD()
     acad.prompt("Hello, Autocad from Python\n")
     print acad.doc.Name
 
@@ -66,3 +69,4 @@ Links
 .. _tablib: http://pypi.python.org/pypi/tablib
 .. _examples: https://github.com/reclosedev/pyautocad/tree/master/examples
 .. _documentation: https://pyautocad.readthedocs.io/
+.. _pyautocad: https://pyautocad.readthedocs.io/
