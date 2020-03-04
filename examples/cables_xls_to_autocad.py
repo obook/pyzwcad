@@ -4,9 +4,9 @@
 import sys
 from collections import defaultdict
 
-from pyautocad import Autocad, ACAD, APoint
-from pyautocad.utils import timing
-from pyautocad.contrib import Table
+from pyzwcad.pyautocad import Autocad, ACAD, APoint
+from pyzwcad.pyautocad.utils import timing
+from pyzwcad.pyautocad.contrib import Table
 
 
 HEADER_TEXT_HEIGHT = 3.5

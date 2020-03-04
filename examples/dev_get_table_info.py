@@ -3,8 +3,8 @@
 #date: 13.02.12
 import pprint
 
-from pyautocad import Autocad
-from pyautocad import utils
+from pyzwcad.pyautocad import Autocad
+from pyzwcad.pyautocad import utils
 
 
 def print_table_info(table, print_rows=0):
@@ -24,14 +24,14 @@ def print_table_info(table, print_rows=0):
             print_rows -= 1
             row_texts.append(columns)
 
-    print 'row_heights = %s' % str(row_heights)
-    print 'column_widths = %s' % str(column_widths)
-    print 'merged_cells = %s' % pprint.pformat(list(merged))
+    print('row_heights = %s' % str(row_heights))
+    print ('column_widths = %s' % str(column_widths))
+    print ('merged_cells = %s' % pprint.pformat(list(merged)))
     if row_texts:
-        print 'content = ['
+        print ('content = [')
         for row in row_texts:
-            print u"        [%s]," % u", ".join("u'%s'" % s for s in row)
-        print ']'
+            print (u"        [%s]," % u", ".join("u'%s'" % s for s in row))
+        print (']')
 
 
 def main():

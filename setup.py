@@ -10,7 +10,7 @@ setup(
     name="pyzwcad",
 #    packages=["pyautocad", "pyautocad.contrib"],
     packages=["pyzwcad", "pyzwcad.contrib"],
-    version="0.3.0",
+    version="0.1.0",
 #    description="AutoCAD Automation for Python",
     description="ZwCAD Automation for Python",
     author="ytianxia6",

@@ -1,7 +1,7 @@
 API
 ===
 
-This part of the documentation covers all the interfaces of `pyautocad`
+This part of the documentation covers all the interfaces of `pyzwcad`
 
 ``api`` - Main Autocad interface
 --------------------------------------------

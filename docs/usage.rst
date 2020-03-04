@@ -4,11 +4,11 @@ Usage
 Main interface and types
 -------------------------
 
-.. currentmodule:: pyautocad.api
+.. currentmodule:: pyzwcad.api
 
 
 For our first example, we will use :class:`Autocad` (main Automation object) and
-:class:`pyautocad.types.APoint` for operations with coordinates
+:class:`pyzwcad.types.APoint` for operations with coordinates
 
 .. literalinclude:: example.py
    :lines: 3
@@ -19,7 +19,7 @@ Let's create AutoCAD application or connect to already running application:
    :lines: 5-7
 
 To work with AutoCAD documents and objects we can use ActiveX interface,
-:class:`Autocad` (from pyautocad) contains some methods to simplify common Automation tasks, such as
+:class:`Autocad` (from pyzwcad) contains some methods to simplify common Automation tasks, such as
 object iteration and searching, getting objects from user's selection, printing messages.
 
 There are shortcuts for current ``ActiveDocument`` - :attr:`Autocad.doc`
@@ -63,7 +63,7 @@ Some properties are described with constants, e.g. text alignment. These constan
 .. literalinclude:: example.py
    :lines: 32-37
 
-.. currentmodule:: pyautocad.types
+.. currentmodule:: pyzwcad.types
 
 In previous code we have converted ``text.InsertionPoint`` to :class:`APoint` because
 we can't just use default ``tuple`` when setting another properties such as ``text.TextAlignmentPoint``.
@@ -85,7 +85,7 @@ Working with tables
 .. _xlrd: http://pypi.python.org/pypi/xlrd
 .. _tablib: http://pypi.python.org/pypi/tablib
 
-.. currentmodule:: pyautocad.contrib.tables
+.. currentmodule:: pyzwcad.contrib.tables
 
 To simplify importing and exporting data there is :class:`Table` class exist.
 It allows you to read and write tabular data in popular formats:
@@ -125,7 +125,7 @@ processor software (e.g. Microsoft Office Excel) we can retrieve our data from f
 .. seealso::
 
     Example of working with AutoCAD table objects
-    at `examples/dev_get_table_info.py <https://github.com/reclosedev/pyautocad/blob/master/examples/dev_get_table_info.py>`_
+    at `examples/dev_get_table_info.py <https://github.com/reclosedev/pyzwcad/blob/master/examples/dev_get_table_info.py>`_
 
 Improve speed
 -------------
@@ -134,10 +134,10 @@ Improve speed
     position, text, etc, every time call is passed to AutoCAD. It can slowdown execution
     time. For example if you have program, which combines single line
     text based on its relative positions, you probably need to get each text position
-    several times. To speed this up, you can cache objects attributes using the :class:`pyautocad.cache.Cached` proxy (see example in class documentation)
+    several times. To speed this up, you can cache objects attributes using the :class:`pyzwcad.cache.Cached` proxy (see example in class documentation)
 
 -   To improve speed of AutoCAD table manipulations, you can use ``Table.RegenerateTableSuppressed = True``
-    or handy context manager :func:`suppressed_regeneration_of(table) <pyautocad.utils.suppressed_regeneration_of>`::
+    or handy context manager :func:`suppressed_regeneration_of(table) <pyzwcad.utils.suppressed_regeneration_of>`::
 
         table = acad.model.AddTable(pos, rows, columns, row_height, col_width)
         with suppressed_regeneration_of(table):
@@ -150,4 +150,4 @@ Utility functions
 -----------------
 
 There is also some utility functions for work with AutoCAD text objects and more.
-See :mod:`pyautocad.utils` documentation.
+See :mod:`pyzwcad.utils` documentation.

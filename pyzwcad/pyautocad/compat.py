@@ -1,0 +1,1 @@
+from pyzwcad.compat import *

@@ -3,8 +3,8 @@
 import codecs
 import sys
 
-from pyautocad import Autocad, APoint
-from pyautocad import utils
+from pyzwcad.pyautocad import Autocad, APoint
+from pyzwcad.pyautocad import utils
 
 
 def iter_drawings_names(acad, doc):
@@ -30,7 +30,7 @@ def main():
     output = codecs.open(filename, "w", encoding='utf-8')
     acad = Autocad()
     for doc in acad.app.Documents:
-        print doc.Name
+        print(doc.Name)
         output.write(u'%s\n' % ('-' * 50))
         output.write(u"    %s\n" % doc.Name)
         output.write(u'%s\n' % ('-' * 50))

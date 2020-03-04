@@ -31,6 +31,7 @@ except Exception:
     # we are under readthedocs.org and need to mock this
     ZCAD = None
 
+
 import pyzwcad.types
 from pyzwcad.compat import basestring, xrange
 
@@ -182,4 +183,5 @@ class ZwCAD(object):
     aInt = staticmethod(pyzwcad.types.aInt)
     #: shortcut for :func:`pyzwcad.types.aShort`
     aShort = staticmethod(pyzwcad.types.aShort)
+
 

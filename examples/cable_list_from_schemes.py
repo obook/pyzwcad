@@ -7,9 +7,9 @@ import re
 import logging
 
 
-from pyautocad import Autocad
-from pyautocad.utils import unformat_mtext, timing
-from pyautocad.contrib import Table, available_write_formats
+from pyzwcad.pyautocad import Autocad
+from pyzwcad.pyautocad.utils import unformat_mtext, timing
+from pyzwcad.pyautocad.contrib import Table, available_write_formats
 
 
 logging.basicConfig(level=logging.INFO, format='%(message)s')
@@ -34,11 +34,11 @@ def get_known_targets(filename):
 
 
 def get_cables(acad, block, known_targets):
-    patterns = [ur"""(?P<cable>.*?)-(?P<section>[\dxх,\(\)]+)\s+
+    patterns = [u"""(?P<cable>.*?)-(?P<section>[\dxх,\(\)]+)\s+
                      (?P<length>\d+)\s*[мm]\\P
                      \s*(?P<name>[^-]+)-(?P<source>.+)\s*""",
 
-                ur"""(?P<name>.*?)-(?P<source>.*?)\s*\\P
+                u"""(?P<name>.*?)-(?P<source>.*?)\s*\\P
                       \s*(?P<cable>.*?)-(?P<section>[\dxх,\(\)]+)\s+
                       (?P<length>\d+)\s*[мm]"""]
     patterns = [re.compile(pat, re.VERBOSE) for pat in patterns]
