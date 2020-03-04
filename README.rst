@@ -59,7 +59,7 @@ Links
 
 - **Documentation** at `readthedocs.org <https://pyautocad.readthedocs.io/>`_
 
-- **Source code and issue tracking** at `GitHub <https://github.com/reclosedev/pyautocad>`_.
+- **Source code and issue tracking** at `GitHub <https://github.com/ytianxia6/pyzwcad>`_.
 
 .. _ActiveX: http://wikipedia.org/wiki/ActiveX
 .. _Automation: http://en.wikipedia.org/wiki/OLE_Automation
@@ -70,3 +70,5 @@ Links
 .. _examples: https://github.com/reclosedev/pyautocad/tree/master/examples
 .. _documentation: https://pyautocad.readthedocs.io/
 .. _pyautocad: https://pyautocad.readthedocs.io/
+.. _ZwCAD: http://www.zwcad.com
+
