@@ -10,7 +10,7 @@
     :license: BSD, see LICENSE.txt for more details.
 """
 __docformat__ = 'restructuredtext en'
-__version__ = '0.3.0'
+__version__ = '0.3.1'
 
 from pyzwcad.api import *
 from pyzwcad.types import *
