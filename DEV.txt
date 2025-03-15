@@ -1,0 +1,7 @@
+For developpement in virtual environment (venv)
+----------------------------------------------- 
+clone repository
+install pyzwcad in your venv : pip install pyzwcad
+delete pyzwcad from  your venv
+link project to your virtual environment.
+Eg : mklink /D "C:\Users\yourname\.venv\Lib\site-packages\pyzwcad" "C:\Users\yourname\Documents\GitHub\pyzwcad\pyzwcad"
