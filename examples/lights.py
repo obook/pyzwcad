@@ -21,17 +21,34 @@ LampEntry = namedtuple('LampEntry', 'number, mark, numxpower')
 # \A1;2ARCTIC SMC/SAN 254 \S2х54/2,5;\P300 лк
 # '1/MARK1/23/LED;'
 def iter_lamps(zwcad, objects):
-    for obj in zwcad.iter_objects(('MText', 'MLeader'), block=objects):
+    for obj in zwcad.iter_objects(('MText'), block=objects):  # 'MText', 'MLeader'
+        print(obj)
         try:
             text = obj.TextString
         except Exception:
             continue
+        
+        '''
+        debug
+        '''
+        
+        # text = r'\A1;2ARCTIC SMC/SAN 254 \S2х54/2,5;\P300'
+        
+        print(f"IN   = [{text}]")
+        
+        
         text = utils.unformat_mtext(text)
+
+        print(r"EXPECT [2ARCTIC SMC//AN 254 \S2х54/2,5;\P300]")
         
-        print(f"unformat_mtext = [{text}]")
+        print(f"OUT  = [{text}] (unformat_mtext)")
         
-        m = re.search(r'(?P<num>\d+)(?P<mark>.*?)\\S(?P<num_power>.*?)/.*?;', text)
-        # m = re.search(r'(?P<num>\d+)\/(?P<mark>.*?)\/(?P<num_power>.*?)\/.*?;', text)
+    
+        
+        # m = re.search(r'(?P<num>\d+)(?P<mark>.*?)\\S(?P<num_power>.*?)/.*?;', text)
+        m = re.search(r'(?P<num>\d+)(?P<mark>.*?)\/(?P<num_power>.*?)\/.*?;', text)
+        
+        print("m=",m)
         if not m:
             continue
         print(m.group('num'), m.group('mark'), m.group('num_power'))
@@ -39,6 +56,12 @@ def iter_lamps(zwcad, objects):
 
 def main():
     zwcad = ZwCAD()
+    try:
+        zwcad.prompt("Lights counter\n")
+    except Exception as error:
+        print(f"ZwCAD error {error}")
+        return
+        
     objects = None
     if 'i' in sys.argv[1:]:
         objects = zwcad.get_selection('Select objects')
