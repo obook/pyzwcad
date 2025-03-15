@@ -1,1 +1,0 @@
-from pyzwcad.pyautocad.contrib.tables import *
