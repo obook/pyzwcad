@@ -1,5 +1,3 @@
-#/usr/bin/env python
-#-*- coding: utf-8 -*-
 """
     lights.py
     ~~~~~~~~~~~~~~~
@@ -19,39 +17,23 @@ from pyzwcad import ZwCAD, utils
 LampEntry = namedtuple('LampEntry', 'number, mark, numxpower')
 
 # \A1;2ARCTIC SMC/SAN 254 \S2х54/2,5;\P300 лк
-# '1/MARK1/23/LED;'
 def iter_lamps(zwcad, objects):
-    for obj in zwcad.iter_objects(('MText'), block=objects):  # 'MText', 'MLeader'
-        print(obj)
+    for obj in zwcad.iter_objects(('MText', 'MLeader'), block=objects):  # 'MText', 'MLeader'
         try:
             text = obj.TextString
         except Exception:
             continue
-        
-        '''
-        debug
-        '''
-        
-        # text = r'\A1;2ARCTIC SMC/SAN 254 \S2х54/2,5;\P300'
-        
-        print(f"IN   = [{text}]")
-        
-        
+            
+        print(text)
+
         text = utils.unformat_mtext(text)
 
-        print(r"EXPECT [2ARCTIC SMC//AN 254 \S2х54/2,5;\P300]")
-        
-        print(f"OUT  = [{text}] (unformat_mtext)")
-        
-    
-        
         # m = re.search(r'(?P<num>\d+)(?P<mark>.*?)\\S(?P<num_power>.*?)/.*?;', text)
-        m = re.search(r'(?P<num>\d+)(?P<mark>.*?)\/(?P<num_power>.*?)\/.*?;', text)
+        m = re.search(r'(?P<num>\d+)(?P<mark>.*?)\\P(?P<num_power>.*?)\/.*?;', text)
         
-        print("m=",m)
         if not m:
             continue
-        print(m.group('num'), m.group('mark'), m.group('num_power'))
+        print('[', m.group('num'),'][', m.group('mark'),'][', m.group('num_power'), ']')
         yield LampEntry(m.group('num'), m.group('mark'), m.group('num_power'))
 
 def main():

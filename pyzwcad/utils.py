@@ -16,10 +16,8 @@ import re
 import time
 from contextlib import contextmanager
 
-newline = 'P'
-fraction = '\\'  # 'S'
 
-def unformat_mtext(s, exclude_list=(newline, fraction)):
+def unformat_mtext(s, exclude_list=('P', 'S')):
     """Returns string with removed format information
 
     :param s: string with multitext
